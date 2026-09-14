@@ -1,0 +1,24 @@
+/* Copyright (c) 2018, Motorola Mobility Inc. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&pmi_haptic {
+	qcom,actuator-type = "lra";
+	qcom,wave-shape = "sine";
+	qcom,en-brake;
+	qcom,lra-auto-res-mode = "none";
+	qcom,lra-high-z = "opt1";
+	qcom,lra-res-cal-period = <4>;
+	qcom,wave-play-rate-us = <4255>;
+	qcom,vmax-mv = <2500>;
+	qcom,brake-pattern = [03 03 03 03];
+	qcom,misc-trim-error-rc19p2-clk-reg-present;
+};
