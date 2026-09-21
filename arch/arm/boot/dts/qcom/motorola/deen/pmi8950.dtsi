@@ -10,10 +10,6 @@
  * GNU General Public License for more details.
  */
 
-&mot_leds {
-	linux,name = "charging";
-};
-
 &spmi_bus {
 	qcom,pm8953@0 {
 		qcom,power-on@800 {

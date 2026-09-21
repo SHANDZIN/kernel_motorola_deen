@@ -15,7 +15,3 @@
 		/delete-node/ qcom,leds@a300;
 	};
 };
-
-&mot_leds {
-	linux,name = "white";
-};
