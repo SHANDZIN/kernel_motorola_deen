@@ -490,9 +490,9 @@ dtb-$(CONFIG_ARCH_MSM8909) += msm8909-pm8916-mtp.dtb \
 endif # CONFIG_MMI_DEVICE_DTBS
 
 ifeq ($(CONFIG_ARM64),y)
+dts-dirs += motorola
 always          := $(dtb-y)
 subdir-y        := $(dts-dirs)
-dts-dirs += motorola
 else
 targets += dtbs
 targets += $(addprefix ../, $(dtb-y))
