@@ -102,4 +102,5 @@ all.config
 android/configs/android-*.cfg
 
 # objects
+gcc/
 out/
