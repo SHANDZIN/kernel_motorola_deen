@@ -166,6 +166,8 @@ ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
 DTC_FLAGS := -p 1024
 endif
 
+# QC reference boards (no Motorola device uses them)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtb-$(CONFIG_ARCH_MDM9640) += mdm9640-sim.dtb \
 	mdm9640-rumi.dtb \
 	mdm9640-emmc-cdp.dtb \
@@ -207,6 +209,7 @@ dtb-$(CONFIG_ARCH_SDX20) += sdx20-emmc-cdp.dtb \
 	sdx20-nand-pcie-ep-mtp.dtb \
 	sdx20-v2-emmc-pcie-ep-mtp.dtb \
 	sdx20-v2-nand-pcie-ep-mtp.dtb
+endif # CONFIG_MMI_DEVICE_DTBS
 
 # Do not include QC default DTBs if not needed
 ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
@@ -304,6 +307,8 @@ dtb-$(CONFIG_ARCH_MSM8953) += msm8953-sim.dtb \
 	msm8953-pmi8937-ext-codec-mtp.dtb
 endif # CONFIG_MMI_DEVICE_DTBS
 
+# QC reference boards (no Motorola device uses them)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtb-$(CONFIG_ARCH_SDM450) += sdm450-rcm.dtb \
 	sdm450-cdp.dtb \
 	sdm450-mtp.dtb \
@@ -313,6 +318,7 @@ dtb-$(CONFIG_ARCH_SDM450) += sdm450-rcm.dtb \
 	sdm450-iot-mtp.dtb \
 	sda450-cdp.dtb \
 	sda450-mtp.dtb
+endif # CONFIG_MMI_DEVICE_DTBS
 
 ifeq ($(CONFIG_ADDISON_DTB),y)
 dtb-$(CONFIG_ARCH_MSM8953) += msm8953-addison-p1.dtb \
@@ -409,6 +415,8 @@ dtb-$(CONFIG_ARCH_MSM8937) += msm8937-montana-p0.dtb \
 	msm8937-montana-p3.dtb
 endif
 
+# QC reference boards (no Motorola device uses them)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-rumi.dtb \
 	mdm9607-cdp.dtb \
 	mdm9607-mtp.dtb \
@@ -420,6 +428,7 @@ dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-rumi.dtb \
 	mdm9206-mtp-sdcard.dtb \
 	mdm9206-rcm.dtb \
 	mdm9207c-mtp.dtb
+endif # CONFIG_MMI_DEVICE_DTBS
 
 # Do not include QC default DTBs if not needed
 ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
@@ -429,6 +438,8 @@ dtb-$(CONFIG_ARCH_MSM8916) += msm8952-qrd-skum.dtb \
        msm8952-mtp.dtb
 endif # CONFIG_MMI_DEVICE_DTBS
 
+# QC reference boards (no Motorola device uses them)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtb-$(CONFIG_ARCH_MSM8909) += msm8909-pm8916-mtp.dtb \
 	msm8909-cdp.dtb \
         msm8909-1gb-qrd-skuc.dtb \
@@ -476,6 +487,7 @@ dtb-$(CONFIG_ARCH_MSM8909) += msm8909-pm8916-mtp.dtb \
 	msm8909-1gb-cdp.dtb \
 	apq8009-ext-codec-dragon.dtb \
 	apq8009-dragon.dtb
+endif # CONFIG_MMI_DEVICE_DTBS
 
 ifeq ($(CONFIG_ARM64),y)
 always          := $(dtb-y)
