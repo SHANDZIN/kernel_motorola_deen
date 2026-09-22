@@ -10,6 +10,7 @@
  * GNU General Public License for more details.
  */
 
+#include "android.dtsi"
 #include "audio.dtsi"
 #include "battery.dtsi"
 #include "bus.dtsi"
